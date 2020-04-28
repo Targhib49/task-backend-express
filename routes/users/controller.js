@@ -70,8 +70,6 @@ module.exports = {
 	deleteById: (req, res) => {
 		try {
 			const id = req.params.id;
-			const { name, address } = req.body;
-
 			users.splice(id - 1, 1);
 
 			res.status(200).json({ message: `User ${id} is successfully deleted`, data: users });
